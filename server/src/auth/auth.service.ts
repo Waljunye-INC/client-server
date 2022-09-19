@@ -13,7 +13,7 @@ export interface Payload{
     id: number;
     email: string;
 }
-export class TokenGeneration{
+export class TokenGeneration extends GenerateTokenDto{
     accessToken: string;
     refreshToken: string;
     userDto: UserDto;
