@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import {SequelizeModule} from "@nestjs/sequelize";
 import { UserModule } from './user/user.module';
 import {ConfigModule} from "@nestjs/config";
+import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [
       ConfigModule.forRoot({
@@ -16,11 +16,12 @@ import {ConfigModule} from "@nestjs/config";
           username: process.env.DB_USERNAME,
           password: process.env.DB_PASSWORD,
           database: process.env.DB_NAME,
-          autoLoadModels: true
+          autoLoadModels: true,
+          synchronize: true,
       }),
-      UserModule
+      UserModule,
+      AuthModule
   ],
-  controllers: [AppController],
-  providers: [AppService]
+  controllers: [AppController]
 })
 export class AppModule {}
