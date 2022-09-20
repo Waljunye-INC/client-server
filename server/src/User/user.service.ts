@@ -7,12 +7,16 @@ import {where} from "sequelize";
 export class UserService {
     constructor(@InjectModel(User) private userRepo: typeof User) {}
     async findAll(){
-        return this.userRepo.findAll()
+        return await this.userRepo.findAll({include: {all: true}})
     }
     async findUserById(id: number){
-        return this.userRepo.findOne({where: { id : id}})
+        return await this.userRepo.findOne({where: { id : id}, include: {all: true}})
     }
     async findUserByEmail(email: string){
-        return this.userRepo.findOne({where: {email: email}})
+        return await this.userRepo.findOne({where: {email: email}, include: {all: true}})
+    }
+    async getRolesByUserId(id: number){
+        const user = await this.userRepo.findOne({where: {id}, include: {all: true}});
+        return user.roles;
     }
 }

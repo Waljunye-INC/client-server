@@ -8,6 +8,7 @@ import {JwtService} from "@nestjs/jwt";
 import * as bcrypt from "bcryptjs";
 import {UserDto} from "./dto/User.dto";
 import {GenerateTokenDto} from "./dto/generate-token.dto";
+import {RolesService} from "../Roles/roles.service";
 
 export interface Payload{
     id: number;
@@ -23,6 +24,7 @@ export class AuthService {
     constructor(
         @InjectModel(Token) private tokenRepository: typeof Token,
         @InjectModel(User) private userRepository: typeof User,
+        private rolesService: RolesService,
         private userService: UserService,
         private JWTService: JwtService) {}
     async register(userCreateDto: UserCreateDto){
@@ -36,11 +38,12 @@ export class AuthService {
                 );
             }
             const hashedUserPassword = await bcrypt.hash(userCreateDto.password, 8);
-            console.log(hashedUserPassword)
             const user = await this.userRepository.create({
                 ...userCreateDto,
                 password: hashedUserPassword,
             })
+            const userRole = await this.rolesService.getRoleByValue('user');
+            await user.$set('roles', [userRole.id]);
             return await this.generateToken(user);
         }catch (e){
             return e;
