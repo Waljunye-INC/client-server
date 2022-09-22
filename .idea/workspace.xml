@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f7cf74bf-045e-4001-9894-6cfd95229e6c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/server/src/Decorators/roles.decorator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/auth/Guards/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Roles/roles.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Roles/roles.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Roles/roles.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Roles/roles.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/User/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/User/user.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/User/user.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/User/user.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/auth/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/auth/auth.module.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JQLSearcherProjectManager">
+    <selected>-1</selected>
+    <searchers />
+  </component>
+  <component name="JiraServerManager">
+    <servers>
+      <JiraServer type="API_TOKEN" url="https://sgames.atlassian.net" />
+    </servers>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2EwNl4C93Sl30My9zm8xrNmO3fV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Project.color&quot;: &quot;065f49&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Development/client-server-admin-panel&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Development\\client-server-admin-panel\\server\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Development\client-server-admin-panel\server\src\User\models" />
+      <recent name="D:\Development\client-server-admin-panel\server" />
+      <recent name="D:\Development\client-server-admin-panel\server\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.start:dev">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start:dev" />
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f7cf74bf-045e-4001-9894-6cfd95229e6c" name="Changes" comment="" />
+      <created>1663502834880</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663502834880</updated>
+      <workItem from="1663502836073" duration="3603000" />
+      <workItem from="1663513320028" duration="299000" />
+      <workItem from="1663513636399" duration="64000" />
+      <workItem from="1663513713760" duration="17407000" />
+      <workItem from="1663600542803" duration="267000" />
+      <workItem from="1663600814184" duration="189000" />
+      <workItem from="1663601009144" duration="132000" />
+      <workItem from="1663672693055" duration="10663000" />
+      <workItem from="1663845429026" duration="4807000" />
+    </task>
+    <task id="LOCAL-00001" summary="CSAP-1 initial-commit">
+      <created>1663511887239</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663511887239</updated>
+    </task>
+    <task id="LOCAL-00002" summary="CSAP-1 initial-commit">
+      <created>1663512086691</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663512086691</updated>
+    </task>
+    <task id="LOCAL-00003" summary="CSAP-4 User Mapping">
+      <created>1663517850386</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663517850386</updated>
+    </task>
+    <task id="LOCAL-00004" summary="CSAP-2 Добавлены ДТО для токенов/создания пользователей, модели для токенов/пользователей. Добавлена JWT авторизация.">
+      <created>1663595520007</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663595520007</updated>
+    </task>
+    <task id="LOCAL-00005" summary="CSAP-2 Добавлены ДТО для токенов/создания пользователей, модели для токенов/пользователей. Добавлена JWT авторизация.">
+      <created>1663600766015</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663600766015</updated>
+    </task>
+    <task id="LOCAL-00006" summary="CSAP-2 Добавлены ДТО для токенов/создания пользователей, модели для токенов/пользователей. Добавлена JWT авторизация.">
+      <created>1663601039070</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1663601039070</updated>
+    </task>
+    <task id="LOCAL-00007" summary="CSAP-2 Добавлен модуль Roles и всё что связывает его с проектом(нехочу объяснять). Добавлена UserRoles model">
+      <created>1663682590990</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663682590990</updated>
+    </task>
+    <task id="LOCAL-00008" summary="CSAP-2 Добавлен модуль Roles и всё что связывает его с проектом(нехочу объяснять). Добавлена UserRoles model">
+      <created>1663682631072</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663682631072</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/server" />
+    </ignored-roots>
+    <MESSAGE value="CSAP-1 initial-commit" />
+    <MESSAGE value="CSAP-4 User Mapping" />
+    <MESSAGE value="CSAP-2 Добавлены ДТО для токенов/создания пользователей, модели для токенов/пользователей. Добавлена JWT авторизация." />
+    <MESSAGE value="CSAP-2 Добавлен модуль Roles и всё что связывает его с проектом(нехочу объяснять). Добавлена UserRoles model" />
+    <option name="LAST_COMMIT_MESSAGE" value="CSAP-2 Добавлен модуль Roles и всё что связывает его с проектом(нехочу объяснять). Добавлена UserRoles model" />
+  </component>
+</project>

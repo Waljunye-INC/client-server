@@ -1,8 +1,10 @@
-import {Body, Controller, Get, Param, Post} from '@nestjs/common';
+import {Body, Controller, Get, Param, Post, SetMetadata, UseGuards} from '@nestjs/common';
 import {RolesService} from "./roles.service";
 import {RoleCreationDto} from "./dto/role-creation.dto";
 import {RoleDeleteDto} from "./dto/role-delete.dto";
 import {AddRoleToUserDto} from "./dto/add-role-to-user.dto";
+import {AuthGuard} from "../auth/Guards/auth.guard";
+import {Roles} from "../Decorators/roles.decorator";
 
 @Controller('roles')
 export class RolesController {
@@ -17,7 +19,8 @@ export class RolesController {
     async getRoleByValue(@Body('value') value: string){
         return await this.rolesService.getRoleByValue(value);
     }
-
+    @UseGuards(AuthGuard)
+    @Roles('admin')
     @Post('create')
     async createRole(@Body() roleCreationDto: RoleCreationDto){
         return await this.rolesService.createRole(roleCreationDto);

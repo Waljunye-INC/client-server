@@ -3,6 +3,7 @@ import {AuthService} from "./auth.service";
 import {UserCreateDto} from "./dto/user-create.dto";
 import {Request} from "@nestjs/common";
 import {Response} from "@nestjs/common";
+import {AuthGuard} from "./Guards/auth.guard";
 
 @Controller('auth')
 export class AuthController {
