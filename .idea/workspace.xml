@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7cf74bf-045e-4001-9894-6cfd95229e6c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/src/User/dto/user-response.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/User/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/User/user.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/User/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/User/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/auth/Guards/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/auth/Guards/auth.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663850472637</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="CSAP-2 Guards">
+      <created>1663946448941</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1663946448941</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -15,7 +15,7 @@ export class UserController {
         const users =  await this.userService.findAll();
         return users.map(e => new UserResponseDto(e))
     }
-    @Roles('admin', 'moderator')
+    @Roles('user', 'moderator', 'admin')
     @UseGuards(AuthGuard)
     @Get('id/:id')
     async findUserById(@Param('id') id: number){
