@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7cf74bf-045e-4001-9894-6cfd95229e6c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/.env.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/User/dto/user-response.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/User/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/User/user.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/User/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/User/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/auth/Guards/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/auth/Guards/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +66,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Development\client-server-admin-panel\server\src\Roles\dto" />
       <recent name="D:\Development\client-server-admin-panel\server\src\User\models" />
       <recent name="D:\Development\client-server-admin-panel\server" />
       <recent name="D:\Development\client-server-admin-panel\server\src" />

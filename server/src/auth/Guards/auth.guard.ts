@@ -2,12 +2,13 @@ import {CanActivate, ExecutionContext, Inject, Injectable} from "@nestjs/common"
 import {Observable} from "rxjs";
 import {Reflector} from "@nestjs/core";
 import {JwtService} from "@nestjs/jwt";
+import {UserService} from "../../User/user.service";
 
 @Injectable()
 export class AuthGuard implements CanActivate{
     constructor(
         private reflector: Reflector,
-        private JwtService: JwtService
+        private JwtService: JwtService,
     ) {
     }
     canActivate(context: ExecutionContext): boolean | Promise<boolean> | Observable<boolean> {
@@ -25,18 +26,26 @@ export class AuthGuard implements CanActivate{
         if(!Bearer || !token){
             return false;
         }
-        const access = roles.includes(this.validateAccessToken(token)
-            .payload
-            .roles[0]
-            .value);
-        if(access){
-            return true;
+        try{
+            console.log(this.validateAccessToken(token)
+                .payload)
+            const access = roles.includes(this.validateAccessToken(token)
+                .payload
+                .roles[0]
+                .value);
+            if(access){
+                return true;
+            }
+        }catch (e){
+            return false;
         }
+
         return false;
     }
     private validateAccessToken(accessToken){
         try{
             return this.JwtService.verify(accessToken, {secret: process.env.JWT_SECRET_ACCESS});
+
         }catch (e){
             return null;
         }

@@ -8,6 +8,7 @@ export class UserService {
     constructor(@InjectModel(User) private userRepo: typeof User) {}
     async findAll(){
         return await this.userRepo.findAll({include: {all: true}})
+
     }
     async findUserById(id: number){
         return await this.userRepo.findOne({where: { id : id}, include: {all: true}})

@@ -2,28 +2,32 @@ import {Body, Controller, Get, Param, UseGuards} from '@nestjs/common';
 import {UserService} from "./user.service";
 import {Roles} from "../Decorators/roles.decorator";
 import {AuthGuard} from "../auth/Guards/auth.guard";
+import {UserResponseDto} from "./dto/user-response.dto";
 
 
 @Controller('users')
 export class UserController {
     constructor(private userService: UserService) {}
-    @Roles('admin', 'moderator')
+    @Roles('user', 'moderator', 'admin')
     @UseGuards(AuthGuard)
     @Get("")
-    async findAll(){
-        return await this.userService.findAll()
+    async findAll(): Promise<UserResponseDto[]>{
+        const users =  await this.userService.findAll();
+        return users.map(e => new UserResponseDto(e))
     }
     @Roles('admin', 'moderator')
     @UseGuards(AuthGuard)
-    @Get(':id')
+    @Get('id/:id')
     async findUserById(@Param('id') id: number){
-        return await this.userService.findUserById(id);
+        const user = await this.userService.findUserById(id);
+        return new UserResponseDto(user)
     }
     @Roles('admin', 'moderator')
     @UseGuards(AuthGuard)
-    @Get('')
+    @Get('email')
     async findUserByEmail(@Body('email') email: string){
-        return await this.userService.findUserByEmail(email)
+        const user = await this.userService.findUserByEmail(email)
+        return new UserResponseDto(user);
     }
     @Roles('admin', 'moderator')
     @UseGuards(AuthGuard)
