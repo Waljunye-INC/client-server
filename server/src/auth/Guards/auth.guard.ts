@@ -27,8 +27,6 @@ export class AuthGuard implements CanActivate{
             return false;
         }
         try{
-            console.log(this.validateAccessToken(token)
-                .payload)
             const access = roles.includes(this.validateAccessToken(token)
                 .payload
                 .roles[0]
