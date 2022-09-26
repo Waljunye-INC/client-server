@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7cf74bf-045e-4001-9894-6cfd95229e6c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/src/posts/dto/post-creation.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/posts/dto/post-request.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/posts/models/post.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/posts/posts.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/posts/posts.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/posts/posts.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/posts/dto/post-self-delete.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/auth/Guards/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/auth/Guards/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/posts/posts.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/posts/posts.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/posts/posts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/posts/posts.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +117,7 @@
       <workItem from="1663672693055" duration="10663000" />
       <workItem from="1663845429026" duration="5776000" />
       <workItem from="1663863719934" duration="127000" />
-      <workItem from="1664193642459" duration="3649000" />
+      <workItem from="1664193642459" duration="7639000" />
     </task>
     <task id="LOCAL-00001" summary="CSAP-1 initial-commit">
       <created>1663511887239</created>
@@ -200,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663950917459</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="CSAP-2 Posts">
+      <created>1664197563421</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1664197563421</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +229,7 @@
     <MESSAGE value="CSAP-2 Добавлены ДТО для токенов/создания пользователей, модели для токенов/пользователей. Добавлена JWT авторизация." />
     <MESSAGE value="CSAP-2 Добавлен модуль Roles и всё что связывает его с проектом(нехочу объяснять). Добавлена UserRoles model" />
     <MESSAGE value="CSAP-2 Guards" />
-    <option name="LAST_COMMIT_MESSAGE" value="CSAP-2 Guards" />
+    <MESSAGE value="CSAP-2 Posts" />
+    <option name="LAST_COMMIT_MESSAGE" value="CSAP-2 Posts" />
   </component>
 </project>

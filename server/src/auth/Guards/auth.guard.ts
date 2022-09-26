@@ -12,21 +12,21 @@ export class AuthGuard implements CanActivate{
     ) {
     }
     canActivate(context: ExecutionContext): boolean | Promise<boolean> | Observable<boolean> {
-        const roles = this.reflector.get<string[]>('roles', context.getHandler());
-        if (!roles){
-            return true;
-        }
-        const request = context.switchToHttp().getRequest();
-        const authorization = request.headers.authorization;
-        if(!authorization){
-            return false;
-        }
-        const Bearer = authorization.split(" ")[0];
-        const token = authorization.split(" ")[1];
-        if(!Bearer || !token){
-            return false;
-        }
         try{
+            const roles = this.reflector.get<string[]>('roles', context.getHandler());
+            if (!roles) {
+                return true;
+            }
+            const request = context.switchToHttp().getRequest();
+            const authorization = request.headers.authorization;
+            if (!authorization) {
+                return false;
+            }
+            const Bearer = authorization.split(" ")[0];
+            const token = authorization.split(" ")[1];
+            if (!Bearer || !token) {
+                return false;
+            }
             const access = roles.includes(this.validateAccessToken(token)
                 .payload
                 .roles[0]
@@ -37,7 +37,6 @@ export class AuthGuard implements CanActivate{
         }catch (e){
             return false;
         }
-
         return false;
     }
     private validateAccessToken(accessToken){

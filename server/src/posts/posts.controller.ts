@@ -1,4 +1,4 @@
-import {Body, Controller, Post, UseGuards} from '@nestjs/common';
+import {Body, Controller, Get, Param, Post, UseGuards} from '@nestjs/common';
 import {PostsService} from "./posts.service";
 import {PostRequestDto} from "./dto/post-request.dto";
 import {Headers} from "@nestjs/common";
@@ -9,15 +9,36 @@ import {AuthGuard} from "../auth/Guards/auth.guard";
 export class PostsController {
     constructor(private postsService: PostsService) {}
 
+    @Get()
+    async getAll(){
+        return await this.postsService.getAll();
+    }
     @Roles('admin', 'moderator', 'user')
     @UseGuards(AuthGuard)
     @Post()
     async create(@Headers('Authorization') authToken, @Body()postRequestDto: PostRequestDto){
-        return this.postsService.create(
+        return await this.postsService.create(
             {
                 accessToken: authToken,
                 text: postRequestDto.text,
                 title: postRequestDto.title
             })
+    }
+    @Roles('admin', 'moderator')
+    @UseGuards(AuthGuard)
+    @Post('admin/delete')
+    async delete(@Body('id') id: number){
+        return await this.postsService.delete(id);
+    }
+
+    @Roles('admin', 'moderator', 'user')
+    @UseGuards(AuthGuard)
+    @Post('delete')
+    async selfDelete(@Headers('Authorization') authToken, @Body('id') id: number){
+        return await this.postsService.selfDelete(
+            {
+            accessToken: authToken,
+            id: id
+        })
     }
 }
