@@ -1,4 +1,4 @@
-import {Body, Controller, Get, Param, Post, SetMetadata, UseGuards} from '@nestjs/common';
+import {Body, Controller, Delete, Get, Param, Post, SetMetadata, UseGuards} from '@nestjs/common';
 import {RolesService} from "./roles.service";
 import {RoleCreationDto} from "./dto/role-creation.dto";
 import {RoleDeleteDto} from "./dto/role-delete.dto";
@@ -25,7 +25,7 @@ export class RolesController {
     async createRole(@Body() roleCreationDto: RoleCreationDto){
         return await this.rolesService.createRole(roleCreationDto);
     }
-    @Post('delete')
+    @Delete('delete')
     async deleteRole(@Body() roleDeleteDto: RoleDeleteDto){
         return await  this.rolesService.deleteRole(roleDeleteDto);
     }

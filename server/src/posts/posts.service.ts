@@ -4,6 +4,7 @@ import {Post} from "./models/post.model";
 import {PostCreationDto} from "./dto/post-creation.dto";
 import {JwtService} from "@nestjs/jwt";
 import {PostSelfDeleteDto} from "./dto/post-self-delete.dto";
+import {Commentary} from "../commentaries/models/commetary.model";
 @Injectable()
 export class PostsService {
     constructor(
@@ -11,7 +12,7 @@ export class PostsService {
         private jwtService: JwtService
     ) {}
     async getAll(){
-        const posts = await this.postRepository.findAll();
+        const posts = await this.postRepository.findAll({include : Commentary});
         return posts.map(e => e.toJSON())
     }
     async create(postCreationDto: PostCreationDto){
@@ -35,7 +36,7 @@ export class PostsService {
     }
     async findPostById(id: number){
         try{
-            return (await this.postRepository.findOne({where: {id}})).toJSON()
+            return await this.postRepository.findOne({where: {id}, include: Commentary})
         }catch (e){
             return e
         }

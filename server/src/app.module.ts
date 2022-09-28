@@ -6,6 +6,7 @@ import {ConfigModule} from "@nestjs/config";
 import { AuthModule } from './auth/auth.module';
 import { RolesModule } from './roles/roles.module';
 import { PostsModule } from './posts/posts.module';
+import { CommentariesModule } from './commentaries/commentaries.module';
 @Module({
   imports: [
       ConfigModule.forRoot({
@@ -24,7 +25,8 @@ import { PostsModule } from './posts/posts.module';
       UserModule,
       AuthModule,
       RolesModule,
-      PostsModule
+      PostsModule,
+      CommentariesModule
   ],
   controllers: [AppController]
 })

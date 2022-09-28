@@ -1,5 +1,7 @@
-import {Column, DataType, ForeignKey, Model, PrimaryKey, Table} from "sequelize-typescript";
+import {BelongsTo, Column, DataType, ForeignKey, HasMany, Model, PrimaryKey, Table} from "sequelize-typescript";
 import {User} from "../../User/models/user.model";
+import {Commentary} from "../../commentaries/models/commetary.model";
+import {Type} from "class-transformer";
 
 export interface PostCreationAttrs{
     userId: number;
@@ -19,4 +21,7 @@ export class Post extends Model<Post, PostCreationAttrs>{
 
     @Column({type: DataType.TEXT, allowNull: false, unique: false})
     text: string;
+
+    @HasMany(() => Commentary, 'postId')
+    commentaries: Commentary[]
 }

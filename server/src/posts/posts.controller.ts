@@ -1,4 +1,4 @@
-import {Body, Controller, Get, Param, Post, UseGuards} from '@nestjs/common';
+import {Body, Controller, Delete, Get, Param, Post, UseGuards} from '@nestjs/common';
 import {PostsService} from "./posts.service";
 import {PostRequestDto} from "./dto/post-request.dto";
 import {Headers} from "@nestjs/common";
@@ -26,14 +26,14 @@ export class PostsController {
     }
     @Roles('admin', 'moderator')
     @UseGuards(AuthGuard)
-    @Post('admin/delete')
+    @Delete('admin/delete')
     async delete(@Body('id') id: number){
         return await this.postsService.delete(id);
     }
 
     @Roles('admin', 'moderator', 'user')
     @UseGuards(AuthGuard)
-    @Post('delete')
+    @Delete('delete')
     async selfDelete(@Headers('Authorization') authToken, @Body('id') id: number){
         return await this.postsService.selfDelete(
             {
